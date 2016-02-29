@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		849E76D91C7D026D002F9A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E76D81C7D026D002F9A91 /* AppDelegate.swift */; };
+		849E76DE1C7D026D002F9A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E76DC1C7D026D002F9A91 /* Main.storyboard */; };
+		849E76E01C7D026D002F9A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849E76DF1C7D026D002F9A91 /* Assets.xcassets */; };
+		849E76E31C7D026D002F9A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E76E11C7D026D002F9A91 /* LaunchScreen.storyboard */; };
+		849E76EB1C7D0A46002F9A91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */; };
+		84B9463F1C7FA7F900D78BDE /* UserMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9463E1C7FA7F900D78BDE /* UserMedia.swift */; };
+		84B946431C839AD500D78BDE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946421C839AD500D78BDE /* FeedViewController.swift */; };
+		84B946451C839B4000D78BDE /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */; };
+		84B946471C839B7800D78BDE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946461C839B7800D78BDE /* ProfileViewController.swift */; };
+		84B946491C83A01700D78BDE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946481C83A01700D78BDE /* PostCell.swift */; };
+		84B946521C83A4F600D78BDE /* PostHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946511C83A4F600D78BDE /* PostHeaderSection.swift */; };
+		84B946541C83A51A00D78BDE /* PostHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B946531C83A51A00D78BDE /* PostHeaderSection.xib */; };
+		985999F31D6E113C29C9762B /* Pods_insta_ground_up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37E995A435715F84D5F3FF1 /* Pods_insta_ground_up.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		36115FD6CCB486E8C07B9529 /* Pods-insta-ground-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta-ground-up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-insta-ground-up/Pods-insta-ground-up.debug.xcconfig"; sourceTree = "<group>"; };
+		849E76D51C7D026D002F9A91 /* insta-ground-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insta-ground-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		849E76D81C7D026D002F9A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		849E76DD1C7D026D002F9A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849E76DF1C7D026D002F9A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		849E76E21C7D026D002F9A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		849E76E41C7D026D002F9A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84B9463E1C7FA7F900D78BDE /* UserMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedia.swift; sourceTree = "<group>"; };
+		84B946421C839AD500D78BDE /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
+		84B946461C839B7800D78BDE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		84B946481C83A01700D78BDE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		84B946511C83A4F600D78BDE /* PostHeaderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderSection.swift; sourceTree = "<group>"; };
+		84B946531C83A51A00D78BDE /* PostHeaderSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostHeaderSection.xib; sourceTree = "<group>"; };
+		B37E995A435715F84D5F3FF1 /* Pods_insta_ground_up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insta_ground_up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63667E65FD702ADCB3A026C /* Pods-insta-ground-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta-ground-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-insta-ground-up/Pods-insta-ground-up.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		849E76D21C7D026D002F9A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				985999F31D6E113C29C9762B /* Pods_insta_ground_up.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10E4272F5865049A8229CF5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36115FD6CCB486E8C07B9529 /* Pods-insta-ground-up.debug.xcconfig */,
+				B63667E65FD702ADCB3A026C /* Pods-insta-ground-up.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4FD96A2DCA3D895F9FB78ABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B37E995A435715F84D5F3FF1 /* Pods_insta_ground_up.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849E76CC1C7D026D002F9A91 = {
+			isa = PBXGroup;
+			children = (
+				849E76D71C7D026D002F9A91 /* insta-ground-up */,
+				849E76D61C7D026D002F9A91 /* Products */,
+				10E4272F5865049A8229CF5F /* Pods */,
+				4FD96A2DCA3D895F9FB78ABD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		849E76D61C7D026D002F9A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849E76D51C7D026D002F9A91 /* insta-ground-up.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849E76D71C7D026D002F9A91 /* insta-ground-up */ = {
+			isa = PBXGroup;
+			children = (
+				84B9464A1C83A01D00D78BDE /* Views */,
+				84B946411C83980F00D78BDE /* View Controllers */,
+				84B946401C83980100D78BDE /* Models */,
+				849E76D81C7D026D002F9A91 /* AppDelegate.swift */,
+				849E76DC1C7D026D002F9A91 /* Main.storyboard */,
+				849E76DF1C7D026D002F9A91 /* Assets.xcassets */,
+				849E76E11C7D026D002F9A91 /* LaunchScreen.storyboard */,
+				849E76E41C7D026D002F9A91 /* Info.plist */,
+			);
+			path = "insta-ground-up";
+			sourceTree = "<group>";
+		};
+		84B946401C83980100D78BDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84B9463E1C7FA7F900D78BDE /* UserMedia.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84B946411C83980F00D78BDE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84B946421C839AD500D78BDE /* FeedViewController.swift */,
+				849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */,
+				84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */,
+				84B946461C839B7800D78BDE /* ProfileViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		84B9464A1C83A01D00D78BDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84B946511C83A4F600D78BDE /* PostHeaderSection.swift */,
+				84B946531C83A51A00D78BDE /* PostHeaderSection.xib */,
+				84B946481C83A01700D78BDE /* PostCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		849E76D41C7D026D002F9A91 /* insta-ground-up */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849E76E71C7D026D002F9A91 /* Build configuration list for PBXNativeTarget "insta-ground-up" */;
+			buildPhases = (
+				3751C4483855F139B05EF90D /* Check Pods Manifest.lock */,
+				849E76D11C7D026D002F9A91 /* Sources */,
+				849E76D21C7D026D002F9A91 /* Frameworks */,
+				849E76D31C7D026D002F9A91 /* Resources */,
+				A024F3A92F73FE5EC4B82FEA /* Embed Pods Frameworks */,
+				BA4355FE7EC75BE62DCAE774 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "insta-ground-up";
+			productName = "insta-ground-up";
+			productReference = 849E76D51C7D026D002F9A91 /* insta-ground-up.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		849E76CD1C7D026D002F9A91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = malikbrowne;
+				TargetAttributes = {
+					849E76D41C7D026D002F9A91 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 849E76D01C7D026D002F9A91 /* Build configuration list for PBXProject "insta-ground-up" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 849E76CC1C7D026D002F9A91;
+			productRefGroup = 849E76D61C7D026D002F9A91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849E76D41C7D026D002F9A91 /* insta-ground-up */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		849E76D31C7D026D002F9A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849E76E31C7D026D002F9A91 /* LaunchScreen.storyboard in Resources */,
+				849E76E01C7D026D002F9A91 /* Assets.xcassets in Resources */,
+				84B946541C83A51A00D78BDE /* PostHeaderSection.xib in Resources */,
+				849E76DE1C7D026D002F9A91 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3751C4483855F139B05EF90D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A024F3A92F73FE5EC4B82FEA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-insta-ground-up/Pods-insta-ground-up-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA4355FE7EC75BE62DCAE774 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-insta-ground-up/Pods-insta-ground-up-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		849E76D11C7D026D002F9A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B946491C83A01700D78BDE /* PostCell.swift in Sources */,
+				84B946471C839B7800D78BDE /* ProfileViewController.swift in Sources */,
+				84B946451C839B4000D78BDE /* PhotoManagerViewController.swift in Sources */,
+				849E76EB1C7D0A46002F9A91 /* LoginViewController.swift in Sources */,
+				84B9463F1C7FA7F900D78BDE /* UserMedia.swift in Sources */,
+				84B946431C839AD500D78BDE /* FeedViewController.swift in Sources */,
+				84B946521C83A4F600D78BDE /* PostHeaderSection.swift in Sources */,
+				849E76D91C7D026D002F9A91 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		849E76DC1C7D026D002F9A91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849E76DD1C7D026D002F9A91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		849E76E11C7D026D002F9A91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849E76E21C7D026D002F9A91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		849E76E51C7D026D002F9A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		849E76E61C7D026D002F9A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		849E76E81C7D026D002F9A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36115FD6CCB486E8C07B9529 /* Pods-insta-ground-up.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "insta-ground-up/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "malikbrowne.insta-ground-up";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		849E76E91C7D026D002F9A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63667E65FD702ADCB3A026C /* Pods-insta-ground-up.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "insta-ground-up/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "malikbrowne.insta-ground-up";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		849E76D01C7D026D002F9A91 /* Build configuration list for PBXProject "insta-ground-up" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849E76E51C7D026D002F9A91 /* Debug */,
+				849E76E61C7D026D002F9A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849E76E71C7D026D002F9A91 /* Build configuration list for PBXNativeTarget "insta-ground-up" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849E76E81C7D026D002F9A91 /* Debug */,
+				849E76E91C7D026D002F9A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 849E76CD1C7D026D002F9A91 /* Project object */;
+}
