@@ -28,6 +28,7 @@ class PhotoManagerViewController: UIViewController, UIImagePickerControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    var image = UIImage()
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
@@ -36,6 +37,8 @@ class PhotoManagerViewController: UIViewController, UIImagePickerControllerDeleg
         chooseImageButton.titleLabel?.text = ""
         
         postImage.image = resize(editedImage, newSize: CGSize(width: 280, height: 280))
+        
+        image = postImage.image!
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -44,7 +47,7 @@ class PhotoManagerViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func onPost(sender: AnyObject) {
         if postImage.image != nil {
-            UserMedia.postUserImage(postImage.image, withCaption: captionLabel.text) { (success: Bool, error: NSError?) -> Void in
+            UserMedia.postUserImage(image, withCaption: captionLabel.text) { (success: Bool, error: NSError?) -> Void in
                 if success {
                     print("success posting image!")
                     self.performSegueWithIdentifier("chosePhotoSegue", sender: nil)

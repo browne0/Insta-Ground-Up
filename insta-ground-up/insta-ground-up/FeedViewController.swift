@@ -46,6 +46,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
         
         cell.postInfo = posts![indexPath.row]
+        let media = cell.postInfo.objectForKey("postImage")
+        media!.getDataInBackgroundWithBlock({ (data:NSData?, error:NSError?) -> Void in
+            if data != nil {
+                cell.postImageView.image = UIImage(data: data!)
+            }
+        })
         
         return cell
     }

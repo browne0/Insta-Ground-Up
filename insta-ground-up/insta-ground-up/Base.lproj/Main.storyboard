@@ -267,7 +267,7 @@
                         <outlet property="captionLabel" destination="7Ij-qh-WRV" id="cT9-zW-JDu"/>
                         <outlet property="chooseImageButton" destination="Fyi-x6-n3h" id="9LW-kA-xRx"/>
                         <outlet property="postImage" destination="uGd-Kp-kQD" id="VVs-2R-3s0"/>
-                        <segue destination="XgD-YL-zMc" kind="presentation" identifier="chosePhotoSegue" id="bTa-8s-pLw"/>
+                        <segue destination="GTl-jf-Fyc" kind="presentation" identifier="chosePhotoSegue" id="Iya-gc-K7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSt-Ol-2MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,6 +279,6 @@
         <image name="like-action" width="54" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bTa-8s-pLw"/>
+        <segue reference="0hP-RO-PM5"/>
     </inferredMetricsTieBreakers>
 </document>

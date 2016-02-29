@@ -21,20 +21,6 @@ class PostCell: UITableViewCell {
             descriptionLabel.text = postInfo.valueForKey("caption") as? String
             likeCount.text = "\(postInfo.valueForKey("likesCount") as! Int) likes"
             
-            if let profilePicture = postInfo.valueForKey("postImage") {
-                profilePicture.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
-                    if error == nil {
-                        self.postImageView.image = UIImage(data: imageData!)
-                        
-                    } else {
-                        print("There was an error retrieving post image")
-                    }
-                    
-                    }, progressBlock: { (progress: Int32) -> Void in
-                        
-                })
-            }
-            
             let likeStatus = postInfo.valueForKey("liked") as! Bool
             
             if likeStatus == true {
