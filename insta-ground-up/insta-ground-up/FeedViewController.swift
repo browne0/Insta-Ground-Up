@@ -13,7 +13,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     var posts: [PFObject]?
-    var postInfo: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +20,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         UserMedia.getPosts { (posts, error) -> () in
             if error == nil {
                 self.posts = posts
+                print(posts)
                 self.tableView.reloadData()
             }
         }
@@ -36,8 +36,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
         
         let nib = UINib(nibName: "PostHeaderSection", bundle: nil)
         tableView.registerNib(nib, forHeaderFooterViewReuseIdentifier: "PostHeaderSection")
@@ -64,17 +62,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 0
     }
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(45.0)
+    }
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("PostHeaderSection")
         let header = cell as! PostHeaderSection
         
-        header.usernameButton.titleLabel!.text = postInfo.valueForKey("author") as? String
-        header.creationTimeLabel.text = postInfo.valueForKey("createdAt") as? String
+        header.contentView.backgroundColor = UIColor.whiteColor()
+        
+//        header.usernameButton.titleLabel!.text = posts["author"]
+//        header.creationTimeLabel.text = postInfo.valueForKey("createdAt") as? String
         
         return cell
     }
     
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 503
+    }
 
     /*
     // MARK: - Navigation

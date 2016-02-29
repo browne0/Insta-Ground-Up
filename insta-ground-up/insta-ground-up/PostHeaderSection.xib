@@ -31,17 +31,17 @@
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="contentView" destination="aml-p5-aUJ" id="LDL-Kr-Qfk"/>
                 <outlet property="creationTimeLabel" destination="qd1-h3-Bm6" id="03V-ld-6fe"/>
+                <outlet property="headerView" destination="aml-p5-aUJ" id="Qyl-y0-s2V"/>
                 <outlet property="profileImageButton" destination="3RV-8q-l0D" id="PYL-56-OTZ"/>
                 <outlet property="usernameButton" destination="nHF-Na-hS5" id="3C7-bx-Kem"/>
             </connections>

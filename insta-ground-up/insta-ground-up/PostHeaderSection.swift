@@ -23,12 +23,6 @@ class PostHeaderSection: UITableViewHeaderFooterView {
     @IBOutlet weak var usernameButton: UIButton!
     @IBOutlet weak var creationTimeLabel: UILabel!
     
-//    var postInfo: PFObject! {
-//        didSet {
-//            creationTimeLabel.text = postInfo.valueForKey("createdAt") as? String
-//            usernameButton.titleLabel?.text = postInfo.valueForKey("author") as? String
-//            
-//        }
-//    }
+    @IBOutlet weak var headerView: UIView!
 
 }

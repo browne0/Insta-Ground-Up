@@ -24,7 +24,6 @@ class PostCell: UITableViewCell {
             if let profilePicture = postInfo.valueForKey("postImage") {
                 profilePicture.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
                     if error == nil {
-                        print("Retrieved post image!")
                         self.postImageView.image = UIImage(data: imageData!)
                         
                     } else {

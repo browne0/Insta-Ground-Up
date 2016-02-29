@@ -41,14 +41,18 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0sb-tZ-rjx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4m-L7-lyX">
-                                <rect key="frame" x="20" y="359" width="280" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4m-L7-lyX">
+                                <rect key="frame" x="20" y="359" width="280" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.068619555339999999" blue="0.0063566960570000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KZ4-Pp-awV" appends="YES" id="Yvr-PH-Yam"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -59,6 +63,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KZ4-Pp-awV">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="VBk-tn-Z4t"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-466" y="124"/>
         </scene>
@@ -122,7 +131,7 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eR-Vi-Ozi">
                                                     <rect key="frame" x="0.0" y="366" width="320" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.93357402146464641" green="0.93357402146464641" blue="0.93357402146464641" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="like-action" translatesAutoresizingMaskIntoConstraints="NO" id="LGZ-Ph-RYp">
                                                     <rect key="frame" x="8" y="375" width="16" height="21"/>
@@ -187,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="124"/>
         </scene>
-        <!--Upload-->
+        <!--Photo Manager View Controller-->
         <scene sceneID="7yc-Ej-zhE">
             <objects>
-                <viewController id="tWd-aB-IJ6" customClass="PhotoManagerViewController" customModule="insta_ground_up" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tWd-aB-IJ6" userLabel="Photo Manager View Controller" customClass="PhotoManagerViewController" customModule="insta_ground_up" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4O4-9y-NMu"/>
                         <viewControllerLayoutGuide type="bottom" id="zSV-Q1-fC5"/>
@@ -198,11 +207,68 @@
                     <view key="view" contentMode="scaleToFill" id="WJ0-yS-rgC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGd-Kp-kQD">
+                                <rect key="frame" x="20" y="55" width="280" height="280"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Enter a detailed description..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ij-qh-WRV">
+                                <rect key="frame" x="20" y="397" width="280" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-4p-TMI">
+                                <rect key="frame" x="20" y="358" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRz-xG-qnw" userLabel="Horizontal Rule">
+                                <rect key="frame" x="20" y="352" width="280" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4a-IW-jHM" userLabel="Horizontal Rule">
+                                <rect key="frame" x="20" y="384" width="280" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-H9-er5" userLabel="Submit Button Container">
+                                <rect key="frame" x="85" y="464" width="150" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXz-99-jx1">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Post">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPost:" destination="tWd-aB-IJ6" eventType="touchUpInside" id="KG1-gH-maF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyi-x6-n3h">
+                                <rect key="frame" x="20" y="58" width="280" height="277"/>
+                                <state key="normal" title="Click Here to Choose an Image"/>
+                                <connections>
+                                    <action selector="onSelectImage:" destination="tWd-aB-IJ6" eventType="touchUpInside" id="cZR-0Z-9GG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS6-uL-xCt">
+                                <rect key="frame" x="20" y="29" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" id="d4l-9h-HXT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="captionLabel" destination="7Ij-qh-WRV" id="cT9-zW-JDu"/>
+                        <outlet property="chooseImageButton" destination="Fyi-x6-n3h" id="9LW-kA-xRx"/>
+                        <outlet property="postImage" destination="uGd-Kp-kQD" id="VVs-2R-3s0"/>
+                        <segue destination="XgD-YL-zMc" kind="presentation" identifier="chosePhotoSegue" id="bTa-8s-pLw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSt-Ol-2MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,4 +278,7 @@
     <resources>
         <image name="like-action" width="54" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bTa-8s-pLw"/>
+    </inferredMetricsTieBreakers>
 </document>

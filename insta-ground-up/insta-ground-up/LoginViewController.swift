@@ -34,25 +34,34 @@ class LoginViewController: UIViewController {
     
     @IBAction func onSignIn(sender: AnyObject) {
         
-        PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
-            if user != nil && self.passwordField.text?.isEmpty != false {
-                print("You have logged in.")
-                self.errorLabel.textColor = UIColor(red: 63.0/255.0, green: 153.0/255.0, blue: 76.0/255.0, alpha: 0.9)
-                UIView.animateWithDuration(0.2, animations: {
-                self.errorLabel.text = "\(self.usernameField.text!) has successfully signed in."
+        if usernameField.text?.isEmpty == false && passwordField.text?.isEmpty == false {
+            PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
+                if user != nil && self.passwordField.text?.isEmpty != false {
+                    print("You have logged in.")
+                    self.errorLabel.textColor = UIColor(red: 63.0/255.0, green: 153.0/255.0, blue: 76.0/255.0, alpha: 0.9)
+                    UIView.animateWithDuration(0.2, animations: {
+                        self.errorLabel.text = "\(self.usernameField.text!) has successfully signed in."
+                        self.errorLabel.alpha = 1
+                    })
+                    self.delay(0.4) {
+                        self.performSegueWithIdentifier("loginSegue", sender: nil)
+                    }
+                } else {
+                    self.errorLabel.alpha = 0
+                    self.errorLabel.textColor = UIColor.redColor()
+                    self.errorLabel.text = error?.localizedDescription
+                    UIView.animateWithDuration(0.3, animations: {
+                        self.errorLabel.alpha = 1
+                    })
+                }
+            }
+        } else {
+            self.errorLabel.alpha = 0
+            self.errorLabel.textColor = UIColor.redColor()
+            self.errorLabel.text = "Please enter both a username and a password."
+            UIView.animateWithDuration(0.3, animations: {
                 self.errorLabel.alpha = 1
             })
-                self.delay(0.4) {
-                    self.performSegueWithIdentifier("loginSegue", sender: nil)
-                }
-            } else {
-                self.errorLabel.alpha = 0
-                self.errorLabel.textColor = UIColor.redColor()
-                self.errorLabel.text = error?.localizedDescription
-                UIView.animateWithDuration(0.3, animations: {
-                    self.errorLabel.alpha = 1
-                })
-            }
         }
         
     }
@@ -61,49 +70,64 @@ class LoginViewController: UIViewController {
         
         let newUser = PFUser()
         
-        newUser.username = usernameField.text
-        newUser.password = passwordField.text
-        
-        newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if success {
-                print("A user was created.")
-                self.errorLabel.alpha = 0
-                UIView.animateWithDuration(0.3, animations: {
-                self.errorLabel.textColor = UIColor.greenColor()
-                self.errorLabel.text = "\(newUser.username!) has successfully signed up."
-                    self.errorLabel.alpha = 1
-                })
+        if usernameField.text?.isEmpty == false && passwordField.text?.isEmpty == false {
+            
+            newUser.username = usernameField.text
+            newUser.password = passwordField.text
+            
+            newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if success {
+                    print("A user was created.")
+                    self.passwordField.text = ""
+                    self.errorLabel.alpha = 0
+                    UIView.animateWithDuration(0.3, animations: {
+                        self.errorLabel.textColor = UIColor.greenColor()
+                        self.errorLabel.text = "\(newUser.username!) has successfully signed up."
+                        self.errorLabel.alpha = 1
+                    })
                 } else {
-                print(error?.localizedDescription)
-                
-                if error?.code == 202 {
-                    self.errorLabel.alpha = 0
-                    self.errorLabel.text = error?.localizedDescription
-                    UIView.animateWithDuration(0.3, animations: {
-                    self.errorLabel.alpha = 1
-                    })
-                }
-                
-                else if error?.code == 200 {
-                    self.errorLabel.alpha = 0
-                    self.errorLabel.text = error?.localizedDescription
-                    UIView.animateWithDuration(0.3, animations: {
-                        self.errorLabel.alpha = 1
-                    })
-                }
-                
-                else if error?.code == 201 {
-                    self.errorLabel.alpha = 0
-                    self.errorLabel.text = error?.localizedDescription
-                    UIView.animateWithDuration(0.3, animations: {
-                        self.errorLabel.alpha = 1
-                    })
+                    //                print(error!.localizedDescription)
+                    
+                    if error?.code == 202 {
+                        self.errorLabel.alpha = 0
+                        self.errorLabel.text = error?.localizedDescription
+                        UIView.animateWithDuration(0.3, animations: {
+                            self.errorLabel.alpha = 1
+                        })
+                    }
+                        
+                    else if error?.code == 200 {
+                        self.errorLabel.alpha = 0
+                        self.errorLabel.text = error?.localizedDescription
+                        UIView.animateWithDuration(0.3, animations: {
+                            self.errorLabel.alpha = 1
+                        })
+                    }
+                        
+                    else if error?.code == 201 {
+                        self.errorLabel.alpha = 0
+                        self.errorLabel.text = error?.localizedDescription
+                        UIView.animateWithDuration(0.3, animations: {
+                            self.errorLabel.alpha = 1
+                        })
+                    }
                 }
             }
+        } else {
+            self.errorLabel.alpha = 0
+            self.errorLabel.textColor = UIColor.redColor()
+            self.errorLabel.text = "Please enter both a username and a password."
+            UIView.animateWithDuration(0.3, animations: {
+                self.errorLabel.alpha = 1
+            })
+
         }
         
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(

@@ -14,11 +14,11 @@
 		849E76EB1C7D0A46002F9A91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */; };
 		84B9463F1C7FA7F900D78BDE /* UserMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9463E1C7FA7F900D78BDE /* UserMedia.swift */; };
 		84B946431C839AD500D78BDE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946421C839AD500D78BDE /* FeedViewController.swift */; };
-		84B946451C839B4000D78BDE /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */; };
 		84B946471C839B7800D78BDE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946461C839B7800D78BDE /* ProfileViewController.swift */; };
 		84B946491C83A01700D78BDE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946481C83A01700D78BDE /* PostCell.swift */; };
 		84B946521C83A4F600D78BDE /* PostHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946511C83A4F600D78BDE /* PostHeaderSection.swift */; };
 		84B946541C83A51A00D78BDE /* PostHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B946531C83A51A00D78BDE /* PostHeaderSection.xib */; };
+		84B946561C83E4B100D78BDE /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B946551C83E4B100D78BDE /* PhotoManagerViewController.swift */; };
 		985999F31D6E113C29C9762B /* Pods_insta_ground_up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37E995A435715F84D5F3FF1 /* Pods_insta_ground_up.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,11 +33,11 @@
 		849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84B9463E1C7FA7F900D78BDE /* UserMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMedia.swift; sourceTree = "<group>"; };
 		84B946421C839AD500D78BDE /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
 		84B946461C839B7800D78BDE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		84B946481C83A01700D78BDE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		84B946511C83A4F600D78BDE /* PostHeaderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderSection.swift; sourceTree = "<group>"; };
 		84B946531C83A51A00D78BDE /* PostHeaderSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostHeaderSection.xib; sourceTree = "<group>"; };
+		84B946551C83E4B100D78BDE /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
 		B37E995A435715F84D5F3FF1 /* Pods_insta_ground_up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insta_ground_up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63667E65FD702ADCB3A026C /* Pods-insta-ground-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta-ground-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-insta-ground-up/Pods-insta-ground-up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +117,8 @@
 			children = (
 				84B946421C839AD500D78BDE /* FeedViewController.swift */,
 				849E76EA1C7D0A46002F9A91 /* LoginViewController.swift */,
-				84B946441C839B4000D78BDE /* PhotoManagerViewController.swift */,
 				84B946461C839B7800D78BDE /* ProfileViewController.swift */,
+				84B946551C83E4B100D78BDE /* PhotoManagerViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,11 +258,11 @@
 			files = (
 				84B946491C83A01700D78BDE /* PostCell.swift in Sources */,
 				84B946471C839B7800D78BDE /* ProfileViewController.swift in Sources */,
-				84B946451C839B4000D78BDE /* PhotoManagerViewController.swift in Sources */,
 				849E76EB1C7D0A46002F9A91 /* LoginViewController.swift in Sources */,
 				84B9463F1C7FA7F900D78BDE /* UserMedia.swift in Sources */,
 				84B946431C839AD500D78BDE /* FeedViewController.swift in Sources */,
 				84B946521C83A4F600D78BDE /* PostHeaderSection.swift in Sources */,
+				84B946561C83E4B100D78BDE /* PhotoManagerViewController.swift in Sources */,
 				849E76D91C7D026D002F9A91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

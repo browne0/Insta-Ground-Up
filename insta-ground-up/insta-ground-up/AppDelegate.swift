@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         // setup parse keys
-        Parse.setApplicationId("insta-ground-up", clientKey: "myMasterKey")
+//        Parse.setApplicationId("insta-ground-up", clientKey: "myMasterKey")
         
         // check if user is logged in.
         if PFUser.currentUser() != nil {
