@@ -22,7 +22,6 @@ class UserMedia: NSObject {
         media["likesCount"] = 0
         media["commentsCount"] = 0
         media["liked"] = false
-        media["createdAt"] = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         
         // Save object (following function will save the object in Parse asynchronously)
         media.saveInBackgroundWithBlock(completion)

@@ -25,11 +25,5 @@ class PostHeaderSection: UITableViewHeaderFooterView {
     
     @IBOutlet weak var headerView: UIView!
     
-    var postInfo: PFObject! {
-        didSet {
-            usernameButton.titleLabel?.text = postInfo.valueForKey("author") as? String
-            creationTimeLabel.text = postInfo.valueForKey("createdAt") as? String
-        }
-    }
 
 }

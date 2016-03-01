@@ -45,7 +45,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
         
-        cell.postInfo = posts![indexPath.row]
+        cell.postInfo = self.posts![indexPath.section]
         let media = cell.postInfo.objectForKey("postImage")
         media!.getDataInBackgroundWithBlock({ (data:NSData?, error:NSError?) -> Void in
             if data != nil {
@@ -78,8 +78,27 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         header.contentView.backgroundColor = UIColor.whiteColor()
         
-//        header.usernameButton.titleLabel!.text = posts["author"]
-//        header.creationTimeLabel.text = postInfo.valueForKey("createdAt") as? String
+        
+        let media = posts![section]
+        let user = media["author"] as! PFUser
+        
+        header.usernameButton.titleLabel?.text = user.username
+        
+//        let formatter = NSDateFormatter()
+//        let createdAt = "\(media.createdAt!)"
+//        let timestamp = formatter.dateFromString(createdAtString)
+        let time = Int((media.createdAt!.timeIntervalSinceNow))
+        
+        if -time/3600 == 0 {
+            header.creationTimeLabel.text = "\(-time/60)m"
+        } else if -time/86400 == 0 {
+            header.creationTimeLabel.text = "\(-time/60)h"
+        } else {
+            header.creationTimeLabel.text = "\(-time/60)d"
+        }
+        
+//        header.usernameButton.titleLabel!.text = userMedia.valueForKey("author") as? String
+//        header.creationTimeLabel.text = userMedia.objectForKey("createdAt") as? String
         
         return cell
     }

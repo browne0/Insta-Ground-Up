@@ -18,10 +18,10 @@ class PostCell: UITableViewCell {
     
     var postInfo: PFObject! {
         didSet {
-            descriptionLabel.text = postInfo.valueForKey("caption") as? String
-            likeCount.text = "\(postInfo.valueForKey("likesCount") as! Int) likes"
+            descriptionLabel.text = postInfo.objectForKey("caption") as? String
+            likeCount.text = "\(postInfo.objectForKey("likesCount") as! Int) likes"
             
-            let likeStatus = postInfo.valueForKey("liked") as! Bool
+            let likeStatus = postInfo.objectForKey("liked") as! Bool
             
             if likeStatus == true {
                 likeButton.imageView!.image = UIImage(named: "like-action-on")
