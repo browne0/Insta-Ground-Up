@@ -93,7 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" id="lGQ-2C-LJl"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="user" id="lGQ-2C-LJl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="IiX-uX-sPT"/>
@@ -151,6 +151,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-Kj-H5h">
                                                     <rect key="frame" x="8" y="327" width="27" height="36"/>
                                                     <state key="normal" image="like-action"/>
+                                                    <connections>
+                                                        <action selector="onLike:" destination="kmU-QU-Quj" eventType="touchUpInside" id="mCM-eX-YJ0"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -166,7 +169,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="TgK-RG-XT4"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="TgK-RG-XT4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="XBV-tM-a1v" id="hNN-eb-vxU"/>
@@ -260,7 +263,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" id="d4l-9h-HXT"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="camera" id="d4l-9h-HXT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -276,9 +279,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="24" height="24"/>
+        <image name="home" width="24" height="24"/>
         <image name="like-action" width="54" height="72"/>
+        <image name="user" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0hP-RO-PM5"/>
+        <segue reference="Iya-gc-K7k"/>
     </inferredMetricsTieBreakers>
 </document>

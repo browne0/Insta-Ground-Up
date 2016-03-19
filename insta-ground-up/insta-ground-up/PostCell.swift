@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AFNetworking
 
 class PostCell: UITableViewCell {
 
@@ -16,20 +17,44 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!
     
+    var objectID: String?
+    
     var postInfo: PFObject! {
         didSet {
             descriptionLabel.text = postInfo.objectForKey("caption") as? String
-            likeCount.text = "\(postInfo.objectForKey("likesCount") as! Int) likes"
-            
+            if postInfo.objectForKey("likesCount") as! Int == 1 {
+                likeCount.text = "\((postInfo.objectForKey("likesCount") as! Int)) like"
+            } else {
+                likeCount.text = "\((postInfo.objectForKey("likesCount") as! Int)) likes"
+            }
+            objectID = postInfo.objectId
             let likeStatus = postInfo.objectForKey("liked") as! Bool
             
             if likeStatus == true {
-                likeButton.imageView!.image = UIImage(named: "like-action-on")
+                likeButton.setImage(UIImage(named: "like-action-on"), forState: .Normal)
             } else {
-                likeButton.imageView!.image = UIImage(named: "like-action")
+                likeButton.setImage(UIImage(named: "like-action"), forState: .Normal)
             }
         }
     }
+    
+    @IBAction func onLike(sender: AnyObject) {
+        
+        if likeButton.imageView?.image == UIImage(named: "like-action") {
+            UserMedia.likePost(objectID!)
+            likeButton.setImage(UIImage(named: "like-action-on"), forState: .Normal)
+            if (postInfo.objectForKey("likesCount") as! Int) + 1 == 1 {
+                likeCount.text = "\((postInfo.objectForKey("likesCount") as! Int) + 1) like"
+            } else {
+                likeCount.text = "\((postInfo.objectForKey("likesCount") as! Int) + 1) likes"
+            }
+        } else if likeButton.imageView?.image == UIImage(named: "like-action-on") {
+            UserMedia.unlikePost(objectID!)
+            likeButton.setImage(UIImage(named: "like-action"), forState: .Normal)
+            likeCount.text = "\((postInfo.objectForKey("likesCount") as! Int)) likes"
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

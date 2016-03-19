@@ -38,6 +38,50 @@ class UserMedia: NSObject {
         return nil
     }
     
+    class func likePost(id: String) {
+        let query = PFQuery(className: "UserMedia")
+        
+        query.getObjectInBackgroundWithId(id) {
+            (userMedia: PFObject?, error: NSError?) -> Void in
+            if error != nil {
+                print(error)
+            } else if let userMedia = userMedia {
+                userMedia.incrementKey("likesCount")
+                userMedia["liked"] = true
+                userMedia.saveInBackgroundWithBlock {
+                    (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("Successfully liked!")
+                    } else {
+                        print(error?.description)
+                    }
+                }
+            }
+        }
+    }
+    
+    class func unlikePost(id: String) {
+        let query = PFQuery(className: "UserMedia")
+        
+        query.getObjectInBackgroundWithId(id) {
+            (userMedia: PFObject?, error: NSError?) -> Void in
+            if error != nil {
+                print(error)
+            } else if let userMedia = userMedia {
+                userMedia.incrementKey("likesCount", byAmount: -1)
+                userMedia["liked"] = false
+                userMedia.saveInBackgroundWithBlock {
+                    (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("Successfully unliked!")
+                    } else {
+                        print(error?.description)
+                    }
+                }
+            }
+        }
+    }
+    
     class func getPosts(completion: (posts: [PFObject]?, error: NSError?) -> ()) {
         let query = PFQuery(className: "UserMedia")
         query.limit = 20

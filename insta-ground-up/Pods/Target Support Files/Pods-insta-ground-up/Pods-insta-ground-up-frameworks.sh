@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-insta-ground-up/AFNetworking.framework"
   install_framework "Pods-insta-ground-up/Bolts.framework"
   install_framework "Pods-insta-ground-up/JVFloatLabeledTextField.framework"
   install_framework "Pods-insta-ground-up/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-insta-ground-up/AFNetworking.framework"
   install_framework "Pods-insta-ground-up/Bolts.framework"
   install_framework "Pods-insta-ground-up/JVFloatLabeledTextField.framework"
   install_framework "Pods-insta-ground-up/Parse.framework"

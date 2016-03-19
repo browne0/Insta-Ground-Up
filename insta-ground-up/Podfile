@@ -6,5 +6,6 @@ use_frameworks!
 target 'insta-ground-up' do
 	pod 'Parse'
 	pod 'JVFloatLabeledTextField'
+	pod 'AFNetworking'
 end
 

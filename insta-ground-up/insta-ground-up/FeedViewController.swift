@@ -20,7 +20,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         UserMedia.getPosts { (posts, error) -> () in
             if error == nil {
                 self.posts = posts
-                print(posts)
                 self.tableView.reloadData()
             }
         }
@@ -89,12 +88,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        let timestamp = formatter.dateFromString(createdAtString)
         let time = Int((media.createdAt!.timeIntervalSinceNow))
         
-        if -time/3600 == 0 {
+        if -time < 60 {
+            header.creationTimeLabel.text = "\(-time)s"
+        } else if -time <= 3600 {
             header.creationTimeLabel.text = "\(-time/60)m"
-        } else if -time/86400 == 0 {
-            header.creationTimeLabel.text = "\(-time/60)h"
+        } else if -time <= 86400 {
+            header.creationTimeLabel.text = "\(-time/3600)h"
+        } else if -time <= 2073600 {
+            header.creationTimeLabel.text = "\(-time/86400)d"
         } else {
-            header.creationTimeLabel.text = "\(-time/60)d"
+            header.creationTimeLabel.text = "\(-time/60)mon"
         }
         
 //        header.usernameButton.titleLabel!.text = userMedia.valueForKey("author") as? String

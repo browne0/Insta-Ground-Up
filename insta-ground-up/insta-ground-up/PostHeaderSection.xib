@@ -11,28 +11,53 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aml-p5-aUJ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aml-p5-aUJ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd1-h3-Bm6">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" text="32m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd1-h3-Bm6">
                             <rect key="frame" x="283" y="14" width="29" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="29" id="38b-4f-uwR"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RV-8q-l0D">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RV-8q-l0D">
                             <rect key="frame" x="8" y="7" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="3tv-6g-rgC"/>
+                                <constraint firstAttribute="width" constant="30" id="Yg0-Wb-B4k"/>
+                            </constraints>
                             <state key="normal" image="profile"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-Na-hS5">
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-Na-hS5">
                             <rect key="frame" x="46" y="8" width="105" height="30"/>
                             <state key="normal" title="thatflyguymalik">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="3RV-8q-l0D" firstAttribute="leading" secondItem="aml-p5-aUJ" secondAttribute="leading" constant="8" id="3cl-Th-hDN"/>
+                        <constraint firstItem="3RV-8q-l0D" firstAttribute="top" secondItem="aml-p5-aUJ" secondAttribute="top" constant="7" id="CRt-bM-Nln"/>
+                        <constraint firstItem="qd1-h3-Bm6" firstAttribute="top" secondItem="aml-p5-aUJ" secondAttribute="top" constant="14" id="DHn-jG-K9o"/>
+                        <constraint firstItem="nHF-Na-hS5" firstAttribute="top" secondItem="aml-p5-aUJ" secondAttribute="top" constant="8" id="Hfx-Vz-VWc"/>
+                        <constraint firstItem="nHF-Na-hS5" firstAttribute="leading" secondItem="3RV-8q-l0D" secondAttribute="trailing" constant="8" id="Js0-vv-stL"/>
+                        <constraint firstAttribute="bottom" secondItem="qd1-h3-Bm6" secondAttribute="bottom" constant="14" id="Ln4-io-OvH"/>
+                        <constraint firstItem="qd1-h3-Bm6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nHF-Na-hS5" secondAttribute="trailing" constant="8" id="PL8-2Z-zdF"/>
+                        <constraint firstAttribute="bottom" secondItem="nHF-Na-hS5" secondAttribute="bottom" constant="7" id="rXM-BQ-8Nj"/>
+                        <constraint firstAttribute="bottom" secondItem="3RV-8q-l0D" secondAttribute="bottom" constant="8" id="s2V-yU-Q83"/>
+                        <constraint firstAttribute="trailing" secondItem="qd1-h3-Bm6" secondAttribute="trailing" constant="8" id="zf4-rl-L6j"/>
+                    </constraints>
                 </view>
             </subviews>
+            <constraints>
+                <constraint firstItem="aml-p5-aUJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="H3r-w9-3R7"/>
+                <constraint firstAttribute="trailing" secondItem="aml-p5-aUJ" secondAttribute="trailing" id="KX8-US-8da"/>
+                <constraint firstAttribute="bottom" secondItem="aml-p5-aUJ" secondAttribute="bottom" id="OO9-bQ-5pL"/>
+                <constraint firstItem="aml-p5-aUJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uVV-Zp-4oi"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

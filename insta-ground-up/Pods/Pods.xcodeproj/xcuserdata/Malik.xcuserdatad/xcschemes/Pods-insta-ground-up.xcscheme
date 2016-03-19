@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B8536FD81D8FCECB34B66C0A'
+               BlueprintIdentifier = '1C604EE152FB40B2151A7FDB'
                BlueprintName = 'Pods-insta-ground-up'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_insta_ground_up.framework'>
